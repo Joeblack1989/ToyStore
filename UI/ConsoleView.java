@@ -28,18 +28,13 @@ public class ConsoleView implements IView {
 
     @Override
     public int getToyWeight() {
-        System.out.print("Вес игрушки: ");
+        System.out.print("Вероятность(%) выпадения игрушки в розыгрышах: ");
         return Integer.parseInt(in.nextLine());
     }
-/**
-    @Override
-    public void setToyWeight(int value) {
-        System.out.printf("Вес игрушки: %s\n", value);
-    }
-*/
+
     @Override
     public void showAll(List<Toy> toys) {
-        System.out.println("\nВсе игрушки для рисования:");
+        System.out.println("\nИмеющиеся игрушки:");
         for (Toy toy : toys) {
             System.out.println(toy);
         }
@@ -48,7 +43,7 @@ public class ConsoleView implements IView {
 
     @Override
     public void showGetToy(Toy toy) {
-        System.out.print("\nРезультаты жеребьевки: ");
+        System.out.print("\nРезультаты розыгрыша: ");
         System.out.println(toy);
     }
 
@@ -60,7 +55,7 @@ public class ConsoleView implements IView {
     @Override
     public boolean clearAllDecision() {
         boolean f = false;
-        System.out.print("\nВы уверены, что очистили все записи (y/n): ");
+        System.out.print("\nВы уверены, что желаете стереть все записи (y/n): ");
         if (in.nextLine().equalsIgnoreCase("Y")) {
             f = true;
         }
@@ -89,7 +84,7 @@ public class ConsoleView implements IView {
 
     @Override
     public int getDrawTimes() {
-        System.out.print("Сколько раз вы хотите нарисовать: ");
+        System.out.print("Сколько раз вы хотите провести розыгрышь? ");
         return Integer.parseInt(in.nextLine());
     }
 
