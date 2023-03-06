@@ -69,7 +69,7 @@ public class ConsoleView implements IView {
 
     @Override
     public void savedItem() {
-        System.out.println("\nУспешно добавлено в текущий сервис");
+        System.out.println("\nИгрушка успешно добавлена в коллекцию ");
     }
 
     @Override
@@ -79,7 +79,7 @@ public class ConsoleView implements IView {
 
     @Override
     public void emptyListMessage() {
-        System.out.println("Список игрушек пуст!");
+        System.out.println("Коллекция игрушек пуста!");
     }
 
     @Override
